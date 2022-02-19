@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+@import "colors";
+@import "display-flex";
+
+html,
+body {
+  font-family: Rubik, sans-serif;
+  font-size: 18px;
+  color: $white;
+}
+
+body {
+  @include display-flex(column, center);
+  background-color: $very-dark-blue;
+}
+
+// Main Wrapper
+main {
+  @include display-flex(column, center);
+  gap: 20px;
+  width: 80vw;
+  // First div
+  & > :first-child {
+    height: 200px;
+  }
+  // All divs inside the main
+  & > div {
+    width: 100%;
+    background-color: $dark-blue;
+    border-radius: 15px;
+  }
+  // Profile Section
+  .profile {
+    .upper-section {
+      @include display-flex(row, space-evenly);
+      height: 65%;
+      border-radius: 15px;
+      background-color: $blue;
+      .jeremy {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        border: 3px solid $white;
+      }
+      .header {
+        @include display-flex(column, center);
+        align-items: start;
+        width: 50%;
+        height: 65px;
+        h1 {
+          font-weight: 300;
+          font-size: 1.2em;
+          margin: 5px 0 0 0;
+        }
+      }
+    }
+    .bottom-section {
+      height: 35%;
+      @include display-flex(row, space-around);
+    }
+  }
+  .work {
+    .background {
+      float: right;
+    }
+  }
+}
+
+// Footer
+footer {
+  margin: 20px;
+}
