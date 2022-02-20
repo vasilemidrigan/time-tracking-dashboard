@@ -1,8 +1,9 @@
+@import "active-states";
+@import "display-flex";
+@import "colors";
 @import "activities";
 @import "footer";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
-@import "colors";
-@import "display-flex";
 
 html,
 body {
@@ -59,8 +60,13 @@ main {
       }
     }
     .bottom-section {
-      height: 35%;
       @include display-flex(row, space-around);
+      color: $pale-blue;
+      font-weight: 200;
+      height: 35%;
+      span:hover {
+        cursor: pointer;
+      }
     }
   }
 }
