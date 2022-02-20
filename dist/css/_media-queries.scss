@@ -1,0 +1,41 @@
+// Media queries
+@import "colors";
+@import "display-flex";
+@import "position-absolute";
+
+@media screen and (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-rows: repeat(2, 200px);
+    grid-template-columns: repeat(4, 200px);
+    grid-template-areas:
+      "profile work play study"
+      "profile exercise social self-care";
+    & > div {
+      height: 100%;
+    }
+    .profile {
+      grid-area: profile;
+      min-height: 100%;
+    }
+
+    .work {
+      grid-area: work;
+    }
+    .play {
+      grid-area: play;
+    }
+    .study {
+      grid-area: study;
+    }
+    .exercise {
+      grid-area: exercise;
+    }
+    .social {
+      grid-area: social;
+    }
+    .self-care {
+      grid-area: self-care;
+    }
+  }
+}

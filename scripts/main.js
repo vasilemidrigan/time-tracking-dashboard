@@ -15,6 +15,7 @@ let currentHours = document.querySelectorAll(".time-dedication");
 let previousText = document.querySelectorAll(".previous__text");
 // for JSON extracting data
 let jsonData;
+
 let daily = [];
 let weekly = [];
 let monthly = [];
@@ -28,7 +29,7 @@ fetch("data.json")
   .catch((err) => new Error(console.log(err)));
 
 // In order to work with .json object, we're running this code below
-//   after 1,5s, at this time it will be already fetched.
+//   after 2s, at this time it will be already fetched.
 setTimeout(() => {
   // Extracting daily, weekly and monthly hours from .json
   jsonData.forEach((el) => {
@@ -111,4 +112,4 @@ setTimeout(() => {
       updateActivity(el.textContent);
     });
   });
-}, 1100);
+}, 1500);

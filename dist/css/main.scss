@@ -6,10 +6,6 @@
 @import "footer";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 
-// div {
-//   border: 1px solid whitesmoke;
-// }
-
 html,
 body {
   font-family: Rubik, sans-serif;
@@ -28,7 +24,8 @@ main {
   margin-top: 50px;
   gap: 20px;
   width: 80vw;
-  max-width: 300px;
+  max-width: 320px;
+  min-width: 300px;
   // First div
   & > :first-child {
     height: 200px;
@@ -76,3 +73,5 @@ main {
     }
   }
 }
+// Apply media queries for screens wider than 800px
+@import "media-queries";

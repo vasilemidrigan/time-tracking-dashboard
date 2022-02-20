@@ -44,6 +44,10 @@
         &__text {
           font-size: 2em;
         }
+        &:hover {
+          cursor: pointer;
+          color: $white;
+        }
       }
       .previous {
         @include position-absolute(unset, 15px, 15px, unset);

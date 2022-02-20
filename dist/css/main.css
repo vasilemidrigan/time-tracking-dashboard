@@ -110,6 +110,16 @@
   font-size: 2em;
 }
 
+.work .interface .right .menu:hover,
+.play .interface .right .menu:hover,
+.study .interface .right .menu:hover,
+.social .interface .right .menu:hover,
+.self-care .interface .right .menu:hover,
+.exercise .interface .right .menu:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
 .work .interface .right .previous,
 .play .interface .right .previous,
 .study .interface .right .previous,
@@ -205,7 +215,8 @@ main {
   margin-top: 50px;
   gap: 20px;
   width: 80vw;
-  max-width: 300px;
+  max-width: 320px;
+  min-width: 300px;
 }
 
 main > :first-child {
@@ -299,5 +310,57 @@ main .profile .bottom-section {
 
 main .profile .bottom-section span:hover {
   cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (200px)[2];
+        grid-template-rows: repeat(2, 200px);
+    -ms-grid-columns: (200px)[4];
+        grid-template-columns: repeat(4, 200px);
+        grid-template-areas: "profile work play study" "profile exercise social self-care";
+  }
+  main > div {
+    height: 100%;
+  }
+  main .profile {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: profile;
+    min-height: 100%;
+  }
+  main .work {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: work;
+  }
+  main .play {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: play;
+  }
+  main .study {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: study;
+  }
+  main .exercise {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: exercise;
+  }
+  main .social {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: social;
+  }
+  main .self-care {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+    grid-area: self-care;
+  }
 }
 /*# sourceMappingURL=main.css.map */
