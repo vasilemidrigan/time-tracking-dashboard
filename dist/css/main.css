@@ -27,23 +27,11 @@
 .social .interface,
 .self-care .interface,
 .exercise .interface {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   position: absolute;
+  top: unset;
+  right: unset;
   bottom: 0;
+  left: unset;
   width: 100%;
   height: 70%;
   background-color: #1c1f4a;
@@ -56,7 +44,9 @@
 .social .interface .left,
 .self-care .interface .left,
 .exercise .interface .left {
-  width: 100px;
+  position: relative;
+  height: 100%;
+  width: 150px;
 }
 
 .work .interface .left .activity-type,
@@ -65,6 +55,11 @@
 .social .interface .left .activity-type,
 .self-care .interface .left .activity-type,
 .exercise .interface .left .activity-type {
+  position: absolute;
+  top: 20px;
+  right: unset;
+  bottom: 0;
+  left: 15px;
   font-size: 1.1em;
   font-weight: 500;
 }
@@ -75,6 +70,11 @@
 .social .interface .left .time-dedication,
 .self-care .interface .left .time-dedication,
 .exercise .interface .left .time-dedication {
+  position: absolute;
+  top: unset;
+  right: unset;
+  bottom: 20px;
+  left: 15px;
   font-size: 2em;
   font-weight: 200;
 }
@@ -85,21 +85,7 @@
 .social .interface .right,
 .self-care .interface .right,
 .exercise .interface .right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-content: center;
-  width: 150px;
+  color: #bdc1ff;
 }
 
 .work .interface .right .menu,
@@ -108,9 +94,11 @@
 .social .interface .right .menu,
 .self-care .interface .right .menu,
 .exercise .interface .right .menu {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  height: 25px;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  bottom: unset;
+  left: unset;
 }
 
 .work .interface .right .menu__text,
@@ -119,9 +107,7 @@
 .social .interface .right .menu__text,
 .self-care .interface .right .menu__text,
 .exercise .interface .right .menu__text {
-  font-size: 2.5em;
-  margin-top: -25px;
-  margin-right: -3px;
+  font-size: 2em;
 }
 
 .work .interface .right .previous,
@@ -130,6 +116,11 @@
 .social .interface .right .previous,
 .self-care .interface .right .previous,
 .exercise .interface .right .previous {
+  position: absolute;
+  top: unset;
+  right: 15px;
+  bottom: 15px;
+  left: unset;
   font-size: 0.8em;
   height: 45px;
 }
@@ -211,8 +202,10 @@ main {
       -ms-flex-align: center;
           align-items: center;
   justify-content: center;
+  margin-top: 50px;
   gap: 20px;
   width: 80vw;
+  max-width: 300px;
 }
 
 main > :first-child {

@@ -1,9 +1,14 @@
 @import "active-states";
 @import "display-flex";
+@import "position-absolute";
 @import "colors";
 @import "activities";
 @import "footer";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+// div {
+//   border: 1px solid whitesmoke;
+// }
 
 html,
 body {
@@ -20,8 +25,10 @@ body {
 // Main Wrapper
 main {
   @include display-flex(column, center);
+  margin-top: 50px;
   gap: 20px;
   width: 80vw;
+  max-width: 300px;
   // First div
   & > :first-child {
     height: 200px;

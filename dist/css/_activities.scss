@@ -1,6 +1,7 @@
 // Activities
 
 @import "display-flex";
+@import "position-absolute";
 @import "colors";
 
 // Activity Cards
@@ -16,37 +17,36 @@
   }
   // Interface
   .interface {
-    @include display-flex(row, space-around);
-    position: absolute;
-    bottom: 0;
+    @include position-absolute(unset, unset, 0, unset);
     width: 100%;
     height: 70%;
     background-color: $dark-blue;
     border-radius: 12px;
     .left {
-      width: 100px;
+      position: relative;
+      height: 100%;
+      width: 150px;
       .activity-type {
+        @include position-absolute(20px, unset, 0, 15px);
         font-size: 1.1em;
         font-weight: 500;
       }
       .time-dedication {
+        @include position-absolute(unset, unset, 20px, 15px);
         font-size: 2em;
         font-weight: 200;
       }
     }
     .right {
-      @include display-flex(column, center);
-      width: 150px;
+      color: $pale-blue;
       .menu {
-        align-self: flex-end;
-        height: 25px;
+        @include position-absolute(0px, 15px, unset, unset);
         &__text {
-          font-size: 2.5em;
-          margin-top: -25px;
-          margin-right: -3px;
+          font-size: 2em;
         }
       }
       .previous {
+        @include position-absolute(unset, 15px, 15px, unset);
         font-size: 0.8em;
         height: 45px;
         &__text {
