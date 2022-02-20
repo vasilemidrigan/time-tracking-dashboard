@@ -1,4 +1,162 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+.work,
+.play,
+.study,
+.social,
+.self-care,
+.exercise {
+  position: relative;
+}
+
+.work img,
+.play img,
+.study img,
+.social img,
+.self-care img,
+.exercise img {
+  float: right;
+}
+
+.work .interface,
+.play .interface,
+.study .interface,
+.social .interface,
+.self-care .interface,
+.exercise .interface {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+  background-color: #1c1f4a;
+  border-radius: 12px;
+}
+
+.work .interface .left .activity-type,
+.play .interface .left .activity-type,
+.study .interface .left .activity-type,
+.social .interface .left .activity-type,
+.self-care .interface .left .activity-type,
+.exercise .interface .left .activity-type {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.work .interface .left .time-dedication,
+.play .interface .left .time-dedication,
+.study .interface .left .time-dedication,
+.social .interface .left .time-dedication,
+.self-care .interface .left .time-dedication,
+.exercise .interface .left .time-dedication {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+.work .interface .right,
+.play .interface .right,
+.study .interface .right,
+.social .interface .right,
+.self-care .interface .right,
+.exercise .interface .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-content: center;
+}
+
+.work .interface .right .menu,
+.play .interface .right .menu,
+.study .interface .right .menu,
+.social .interface .right .menu,
+.self-care .interface .right .menu,
+.exercise .interface .right .menu {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  height: 25px;
+}
+
+.work .interface .right .menu__text,
+.play .interface .right .menu__text,
+.study .interface .right .menu__text,
+.social .interface .right .menu__text,
+.self-care .interface .right .menu__text,
+.exercise .interface .right .menu__text {
+  font-size: 2.5em;
+  margin-top: -25px;
+  margin-right: -3px;
+}
+
+.work .interface .right .previous,
+.play .interface .right .previous,
+.study .interface .right .previous,
+.social .interface .right .previous,
+.self-care .interface .right .previous,
+.exercise .interface .right .previous {
+  font-size: 0.8em;
+  height: 45px;
+}
+
+.work .interface .right .previous__text,
+.play .interface .right .previous__text,
+.study .interface .right .previous__text,
+.social .interface .right .previous__text,
+.self-care .interface .right .previous__text,
+.exercise .interface .right .previous__text {
+  margin-top: 15px;
+}
+
+.work {
+  background-color: #ff8c66;
+}
+
+.study {
+  background-color: #ff5c7c;
+}
+
+.social {
+  background-color: #7536d3;
+}
+
+.exercise {
+  background-color: #4acf81;
+}
+
+.self-care {
+  background-color: #f1c65b;
+}
+
+.play {
+  background-color: #56c2e6;
+}
+
+footer {
+  margin: 40px;
+}
+
 html,
 body {
   font-family: Rubik, sans-serif;
@@ -49,6 +207,7 @@ main > :first-child {
 
 main > div {
   width: 100%;
+  height: 160px;
   background-color: #1c1f4a;
   border-radius: 15px;
 }
@@ -127,13 +286,5 @@ main .profile .bottom-section {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-}
-
-main .work .background {
-  float: right;
-}
-
-footer {
-  margin: 20px;
 }
 /*# sourceMappingURL=main.css.map */

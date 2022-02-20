@@ -1,6 +1,6 @@
 "use strict";
 let jsonData;
-// Getting data from .json file
+// Fetching data from .json file
 fetch("data.json")
   .then((response) => {
     return response.json();
