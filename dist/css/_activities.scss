@@ -24,6 +24,7 @@
     background-color: $dark-blue;
     border-radius: 12px;
     .left {
+      width: 100px;
       .activity-type {
         font-size: 1.1em;
         font-weight: 500;
@@ -35,6 +36,7 @@
     }
     .right {
       @include display-flex(column, center);
+      width: 150px;
       .menu {
         align-self: flex-end;
         height: 25px;

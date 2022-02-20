@@ -50,6 +50,15 @@
   border-radius: 12px;
 }
 
+.work .interface .left,
+.play .interface .left,
+.study .interface .left,
+.social .interface .left,
+.self-care .interface .left,
+.exercise .interface .left {
+  width: 100px;
+}
+
 .work .interface .left .activity-type,
 .play .interface .left .activity-type,
 .study .interface .left .activity-type,
@@ -90,6 +99,7 @@
       -ms-flex-align: center;
           align-items: center;
   justify-content: center;
+  width: 150px;
 }
 
 .work .interface .right .menu,
