@@ -11,18 +11,8 @@
       .upper-section {
         @include display-flex(unset, unset);
         position: relative;
-
-        height: 65%;
-        border-radius: 15px;
-        background-color: $blue;
-
         .jeremy {
           @include position-absolute(30px, 0, 0, 20px);
-
-          width: 65px;
-          height: 65px;
-          border-radius: 50%;
-          border: 3px solid $white;
         }
         .header {
           @include display-flex(unset, unset);
@@ -48,12 +38,6 @@
         align-items: start;
         gap: 10px;
         margin-left: 20px;
-        color: $pale-blue;
-        font-weight: 200;
-        height: 35%;
-        span:hover {
-          cursor: pointer;
-        }
       }
     }
 

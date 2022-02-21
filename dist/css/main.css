@@ -344,9 +344,6 @@ main .profile .bottom-section span:hover {
         -ms-flex-pack: unset;
             justify-content: unset;
     position: relative;
-    height: 65%;
-    border-radius: 15px;
-    background-color: #5847eb;
   }
   main .profile .upper-section .jeremy {
     position: absolute;
@@ -354,10 +351,6 @@ main .profile .bottom-section span:hover {
     right: 0;
     bottom: 0;
     left: 20px;
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    border: 3px solid #fff;
   }
   main .profile .upper-section .header {
     display: -webkit-box;
@@ -423,12 +416,6 @@ main .profile .bottom-section span:hover {
             align-items: start;
     gap: 10px;
     margin-left: 20px;
-    color: #bdc1ff;
-    font-weight: 200;
-    height: 35%;
-  }
-  main .profile .bottom-section span:hover {
-    cursor: pointer;
   }
   main .work {
     -ms-grid-row: 1;
