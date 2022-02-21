@@ -312,7 +312,7 @@ main .profile .bottom-section span:hover {
   cursor: pointer;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   main {
     display: -ms-grid;
     display: grid;
@@ -322,15 +322,113 @@ main .profile .bottom-section span:hover {
         grid-template-columns: repeat(4, 200px);
         grid-template-areas: "profile work play study" "profile exercise social self-care";
   }
-  main > div {
+  main .profile {
+    grid-row: span 2;
     height: 100%;
   }
-  main .profile {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
-    grid-area: profile;
-    min-height: 100%;
+  main .profile .upper-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    position: relative;
+    height: 65%;
+    border-radius: 15px;
+    background-color: #5847eb;
+  }
+  main .profile .upper-section .jeremy {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    bottom: 0;
+    left: 20px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+  }
+  main .profile .upper-section .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    position: absolute;
+    top: 130px;
+    right: 0;
+    bottom: 0;
+    left: 20px;
+    width: unset;
+    height: unset;
+  }
+  main .profile .upper-section .header span {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0px;
+    color: #bdc1ff;
+    font-size: 0.8em;
+  }
+  main .profile .upper-section .header h1 {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    bottom: 0;
+    left: 0px;
+    font-weight: 200;
+    font-size: 2em;
+    margin: 0;
+  }
+  main .profile .bottom-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    gap: 10px;
+    margin-left: 20px;
+    color: #bdc1ff;
+    font-weight: 200;
+    height: 35%;
+  }
+  main .profile .bottom-section span:hover {
+    cursor: pointer;
   }
   main .work {
     -ms-grid-row: 1;
@@ -361,6 +459,9 @@ main .profile .bottom-section span:hover {
     -ms-grid-row: 2;
     -ms-grid-column: 4;
     grid-area: self-care;
+  }
+  main > div {
+    height: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */

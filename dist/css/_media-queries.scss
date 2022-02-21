@@ -3,20 +3,58 @@
 @import "display-flex";
 @import "position-absolute";
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   main {
-    display: grid;
-    grid-template-rows: repeat(2, 200px);
-    grid-template-columns: repeat(4, 200px);
-    grid-template-areas:
-      "profile work play study"
-      "profile exercise social self-care";
-    & > div {
-      height: 100%;
-    }
     .profile {
-      grid-area: profile;
-      min-height: 100%;
+      grid-row: span 2;
+      height: 100%;
+      .upper-section {
+        @include display-flex(unset, unset);
+        position: relative;
+
+        height: 65%;
+        border-radius: 15px;
+        background-color: $blue;
+
+        .jeremy {
+          @include position-absolute(30px, 0, 0, 20px);
+
+          width: 65px;
+          height: 65px;
+          border-radius: 50%;
+          border: 3px solid $white;
+        }
+        .header {
+          @include display-flex(unset, unset);
+          @include position-absolute(130px, 0, 0, 20px);
+          width: unset;
+          height: unset;
+
+          span {
+            @include position-absolute(0px, 0, 0, 0px);
+            color: $pale-blue;
+            font-size: 0.8em;
+          }
+          h1 {
+            @include position-absolute(20px, 0, 0, 0px);
+            font-weight: 200;
+            font-size: 2em;
+            margin: 0;
+          }
+        }
+      }
+      .bottom-section {
+        @include display-flex(column, center);
+        align-items: start;
+        gap: 10px;
+        margin-left: 20px;
+        color: $pale-blue;
+        font-weight: 200;
+        height: 35%;
+        span:hover {
+          cursor: pointer;
+        }
+      }
     }
 
     .work {
@@ -36,6 +74,16 @@
     }
     .self-care {
       grid-area: self-care;
+    }
+    // main properties
+    display: grid;
+    grid-template-rows: repeat(2, 200px);
+    grid-template-columns: repeat(4, 200px);
+    grid-template-areas:
+      "profile work play study"
+      "profile exercise social self-care";
+    & > div {
+      height: 100%;
     }
   }
 }
