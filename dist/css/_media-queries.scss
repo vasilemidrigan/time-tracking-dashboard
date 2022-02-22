@@ -22,7 +22,7 @@
           @include position-absolute(130px, 0, 0, 20px);
           width: unset;
           height: unset;
-
+          margin-top: unset;
           span {
             @include position-absolute(0px, 0, 0, 0px);
             color: $pale-blue;
@@ -68,6 +68,16 @@
     .self-care {
       grid-area: self-care;
     }
+    // .main properties
+    display: grid;
+    grid-template-rows: repeat(2, 230px);
+    grid-template-columns: repeat(4, 230px);
+    grid-template-areas:
+      "profile work play study"
+      "profile exercise social self-care";
+    & > div {
+      height: 100%;
+    }
     // Updating .interface height for each activity card
     .work,
     .play,
@@ -99,17 +109,6 @@
           }
         }
       }
-    }
-
-    // .main properties
-    display: grid;
-    grid-template-rows: repeat(2, 230px);
-    grid-template-columns: repeat(4, 230px);
-    grid-template-areas:
-      "profile work play study"
-      "profile exercise social self-care";
-    & > div {
-      height: 100%;
     }
   }
 }

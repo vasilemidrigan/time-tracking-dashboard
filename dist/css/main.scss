@@ -52,14 +52,16 @@ main {
         border: 3px solid $white;
       }
       .header {
-        @include display-flex(column, center);
-        align-items: start;
-        width: 50%;
+        margin-top: 20px;
+        width: 60%;
         height: 65px;
         h1 {
           font-weight: 300;
           font-size: 1.2em;
-          margin: 5px 0 0 0;
+        }
+        span {
+          color: $pale-blue;
+          font-size: 0.8em;
         }
       }
     }
@@ -68,9 +70,6 @@ main {
       color: $pale-blue;
       font-weight: 200;
       height: 35%;
-      span:hover {
-        cursor: pointer;
-      }
     }
   }
 }
