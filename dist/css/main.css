@@ -303,7 +303,7 @@ main .profile .bottom-section {
   height: 35%;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   main {
     display: -ms-grid;
     display: grid;
