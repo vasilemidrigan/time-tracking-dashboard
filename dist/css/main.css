@@ -429,6 +429,10 @@ main .profile .bottom-section span:hover {
     gap: 10px;
     margin-left: 20px;
   }
+  main .profile .bottom-section span:hover {
+    cursor: pointer;
+    color: #fff;
+  }
   main .work {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
@@ -480,7 +484,7 @@ main .profile .bottom-section span:hover {
   main .social .interface:hover,
   main .self-care .interface:hover {
     cursor: pointer;
-    background-color: #6f76c8;
+    background-color: #2f3360;
   }
   main .work .interface .left .activity-type,
   main .play .interface .left .activity-type,
@@ -506,6 +510,7 @@ main .profile .bottom-section span:hover {
     bottom: unset;
     left: 30px;
     font-size: 2.3em;
+    width: 200px;
   }
   main .work .interface .right .previous,
   main .play .interface .right .previous,

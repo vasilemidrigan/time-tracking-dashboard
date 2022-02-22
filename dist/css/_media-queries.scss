@@ -41,6 +41,12 @@
         align-items: start;
         gap: 10px;
         margin-left: 20px;
+        span {
+          &:hover {
+            cursor: pointer;
+            color: $white;
+          }
+        }
       }
     }
     // Assigning grid area name to each card
@@ -84,6 +90,7 @@
           .time-dedication {
             @include position-absolute(80px, unset, unset, 30px);
             font-size: 2.3em;
+            width: 200px;
           }
         }
         .right {
