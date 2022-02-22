@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .update-text-color {
   color: #fff;
 }
@@ -312,17 +319,21 @@ main .profile .bottom-section span:hover {
   cursor: pointer;
 }
 
-@media screen and (min-width: 900px) {
+@media (min-width: 900px) {
   main {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: (200px)[2];
-        grid-template-rows: repeat(2, 200px);
-    -ms-grid-columns: (200px)[4];
-        grid-template-columns: repeat(4, 200px);
+    -ms-grid-rows: (230px)[2];
+        grid-template-rows: repeat(2, 230px);
+    -ms-grid-columns: (230px)[4];
+        grid-template-columns: repeat(4, 230px);
         grid-template-areas: "profile work play study" "profile exercise social self-care";
   }
   main .profile {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: profile;
     grid-row: span 2;
     height: 100%;
   }
@@ -344,6 +355,7 @@ main .profile .bottom-section span:hover {
         -ms-flex-pack: unset;
             justify-content: unset;
     position: relative;
+    min-height: 67%;
   }
   main .profile .upper-section .jeremy {
     position: absolute;
@@ -446,6 +458,66 @@ main .profile .bottom-section span:hover {
     -ms-grid-row: 2;
     -ms-grid-column: 4;
     grid-area: self-care;
+  }
+  main .work .interface,
+  main .play .interface,
+  main .study .interface,
+  main .exercise .interface,
+  main .social .interface,
+  main .self-care .interface {
+    position: absolute;
+    top: unset;
+    right: unset;
+    bottom: 0;
+    left: unset;
+    min-height: 80%;
+    width: 100%;
+  }
+  main .work .interface:hover,
+  main .play .interface:hover,
+  main .study .interface:hover,
+  main .exercise .interface:hover,
+  main .social .interface:hover,
+  main .self-care .interface:hover {
+    cursor: pointer;
+    background-color: #6f76c8;
+  }
+  main .work .interface .left .activity-type,
+  main .play .interface .left .activity-type,
+  main .study .interface .left .activity-type,
+  main .exercise .interface .left .activity-type,
+  main .social .interface .left .activity-type,
+  main .self-care .interface .left .activity-type {
+    position: absolute;
+    top: 30px;
+    right: unset;
+    bottom: unset;
+    left: 30px;
+  }
+  main .work .interface .left .time-dedication,
+  main .play .interface .left .time-dedication,
+  main .study .interface .left .time-dedication,
+  main .exercise .interface .left .time-dedication,
+  main .social .interface .left .time-dedication,
+  main .self-care .interface .left .time-dedication {
+    position: absolute;
+    top: 80px;
+    right: unset;
+    bottom: unset;
+    left: 30px;
+    font-size: 2.3em;
+  }
+  main .work .interface .right .previous,
+  main .play .interface .right .previous,
+  main .study .interface .right .previous,
+  main .exercise .interface .right .previous,
+  main .social .interface .right .previous,
+  main .self-care .interface .right .previous {
+    position: absolute;
+    top: unset;
+    right: unset;
+    bottom: 10px;
+    left: 30px;
   }
   main > div {
     height: 100%;
